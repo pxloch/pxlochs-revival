@@ -1,0 +1,15 @@
+name: PxlochsRevival
+version: 1.0
+main: com.pxloch.pxlochsrevival.PxlochsRevival
+api-version: 1.20
+author: pxloch
+description: Hardcore revival plugin with world reset feature
+commands:
+  revive:
+    description: Canlandır bir oyuncuyu
+    usage: /revive <oyuncu_adı>
+    aliases: [rev, resurrect]
+  lives:
+    description: Canlanma haklarını göster
+    usage: /lives
+    aliases: [liv]

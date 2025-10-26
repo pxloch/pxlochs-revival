@@ -1,0 +1,97 @@
+# ==========================================
+# Hardcore Revival Plugin Configuration
+# ==========================================
+
+settings:
+  # Dil ayarı / Language setting
+  # Mevcut diller / Available languages: tr, en
+  # Kendi dilinizi eklemek için messages bölümüne yeni bir dil ekleyin
+  language: tr
+
+# ==========================================
+# Oyun Verileri / Game Data
+# (Otomatik güncellenir / Auto-updated)
+# ==========================================
+game-data:
+  revive-cost: 20
+  diamonds-achievement: false
+  nights-passed: 0
+  last-night-check: 0
+  revive-rights: {}
+
+# ==========================================
+# Mesajlar / Messages
+# ==========================================
+# Renk kodları / Color codes:
+# &0-&9, &a-&f = Renkler / Colors
+# &l = Kalın / Bold
+# &n = Altı çizili / Underline
+# &o = İtalik / Italic
+# {player} = Oyuncu adı / Player name
+# {cost} = Maliyet / Cost
+# {lives} = Kalan can / Lives remaining
+# {seconds} = Saniye / Seconds
+# ==========================================
+
+messages:
+  # Türkçe Mesajlar
+  tr:
+    # Ölüm mesajları
+    PLAYER_DIED: "&e{player} &cöldü!"
+    PERMANENT_DEATH: "&c&l{player} KALİCİ OLARAK ÖLDÜ!"
+    NO_REVIVES_LEFT: "&7Canlanma hakkı kalmamıştı..."
+    BOTH_DEAD: "&c&lHer iki oyuncu da öldü!"
+    SERVER_RESET: "&c&lSUNUCU SIFIRLANIYOR!"
+    
+    # Canlandırma mesajları
+    REVIVE_COMMAND: "&aCanlandırmak için: &e/revive {player}"
+    REVIVE_COST: "&7Gereken: &6{cost} {material}"
+    REVIVE_SUCCESS: "&a&l{reviver} &e, &l{target} &aoyuncusunu canlandırdı!"
+    REVIVE_FAILED_DEAD: "&cÖlü bir oyuncu canlandırma yapamaz!"
+    REVIVE_FAILED_ALIVE: "&c{player} zaten hayatta!"
+    REVIVE_FAILED_NO_RIGHTS: "&c{player} canlandırılamaz! Canlanma hakkı kalmadı."
+    REVIVE_FAILED_ITEMS: "&c&lYeterli {material} yok!"
+    REVIVED_TITLE: "&e&lCANLANDIRILDIN!"
+    REVIVED_SUBTITLE: "&7İkinci şansını iyi kullan!"
+    LAST_CHANCE: "&c&lBU SON ŞANSIN! Bir daha canlandırılamayacaksın!"
+    
+    # Can sistemi
+    LIVES_REMAINING: "&6Kalan canlanma hakkı: &e{lives}/3"
+    LIVES_WARNING: "&c&lDİKKAT: {player} bir daha canlandırılamayacak!"
+    YOUR_LIVES: "&7Senin canlanma hakkın: &a{lives}/3"
+    PLAYER_STATUS_DEAD: "&c(Ölü)"
+    PLAYER_STATUS_ALIVE: "&a(Canlı)"
+    
+    # Elmas sistemi
+    DIAMOND_FOUND: "&b&l{player} &e&lELMASLARI BULDU!"
+    COST_CHANGED: "&cCanlandırma maliyeti değişti:"
+    COST_OLD: "&7Eski: &f20 Demir"
+    COST_NEW: "&7Yeni: &e5 Elmas"
+    COST_INFO: "&7Her 2 gecede maliyet 1 elmas artacak!"
+    COST_INCREASED: "&cCanlandırma maliyeti arttı: &e{cost} Elmas"
+    NIGHTS_PASSED: "&e&l2 Gece Geçti!"
+    
+    # Genel mesajlar
+    COUNTDOWN: "&e{seconds} saniye..."
+    MATERIAL_IRON: "Demir"
+    MATERIAL_DIAMOND: "Elmas"
+    SEPARATOR: "&6&l========================================"
+    
+    # Komut mesajları
+    CMD_USAGE_REVIVE: "&cKullanım: /revive <oyuncu_adı>"
+    CMD_USAGE_LIVES: "&cKullanım: /lives"
+    CMD_PLAYER_NOT_FOUND: "&cOyuncu bulunamadı: {player}"
+    CMD_ONLY_PLAYERS: "&cBu komutu sadece oyuncular kullanabilir!"
+    CMD_LIVES_TITLE: "&e&lCANLANMA BİLGİLERİ:"
+    CMD_LIVES_COST: "&7Canlandırma maliyeti: &6{cost} {material}"
+    CMD_LIVES_NIGHTS: "&7Geçen gece sayısı: &e{nights}"
+    CMD_DEAD_PLAYERS: "&7Ölü oyuncular:"
+    
+    # Envanter mesajları
+    INV_REQUIRED: "&7Gerekli: &6{cost} {material}"
+    INV_CURRENT: "&7Envanterde: &e{current} {material}"
+    INV_MISSING: "&cEksik: &e{missing} {material}"
+    INV_USED: "&a{cost} {material} kullanıldı!"
+    
+    # Sunucu mesajları
+    SERVER_RESETTING: "&c&l========================================\n&c&lSUNUCU SIFIRLANIYOR!\n\n&7Dünyalar silinecek ve sunucu kapanacak.\
