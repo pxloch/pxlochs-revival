@@ -44,7 +44,7 @@ public class PxlochsRevival extends JavaPlugin implements Listener, CommandExecu
         loadConfig();
         startNightCounter();
         
-        getLogger().info("Hardcore Revival Plugin aktif!");
+        getLogger().info("Pxloch's Revival Plugin aktif!");
         getLogger().info("Dil: " + language);
         getLogger().info("Canlandırma maliyeti: " + reviveCost + " " + (reviveCost == 20 ? "Demir" : "Elmas"));
     }
@@ -52,7 +52,7 @@ public class PxlochsRevival extends JavaPlugin implements Listener, CommandExecu
     @Override
     public void onDisable() {
         saveConfigData();
-        getLogger().info("Hardcore Revival Plugin kapatıldı!");
+        getLogger().info("Pxloch's Revival Plugin kapatıldı!");
     }
     
     private void createDefaultConfig() {
@@ -137,6 +137,9 @@ public class PxlochsRevival extends JavaPlugin implements Listener, CommandExecu
                             Bukkit.broadcastMessage(msg("COST_INCREASED").replace("{cost}", String.valueOf(reviveCost)));
                             Bukkit.broadcastMessage("§6§l========================================");
                             saveConfigData();
+                        } else {
+                            // Gece sayısı değişti, kaydet
+                            saveConfigData();
                         }
                     }
                 }
@@ -196,6 +199,9 @@ public class PxlochsRevival extends JavaPlugin implements Listener, CommandExecu
             Bukkit.broadcastMessage(msg("SERVER_RESET"));
             Bukkit.broadcastMessage("§c§l========================================");
             
+            // Config'i kaydet
+            saveConfigData();
+            
             // Sunucuyu sıfırla
             new BukkitRunnable() {
                 int countdown = 10;
@@ -225,6 +231,9 @@ public class PxlochsRevival extends JavaPlugin implements Listener, CommandExecu
         // Spectator moduna al
         deadPlayer.setGameMode(GameMode.SPECTATOR);
         
+        // Config'i kaydet
+        saveConfigData();
+        
         // Kaç kişinin öldüğünü kontrol et
         int deadCount = 0;
         for (Player p : Bukkit.getOnlinePlayers()) {
@@ -239,6 +248,9 @@ public class PxlochsRevival extends JavaPlugin implements Listener, CommandExecu
             Bukkit.broadcastMessage(msg("BOTH_DEAD"));
             Bukkit.broadcastMessage(msg("SERVER_RESET"));
             Bukkit.broadcastMessage(msg("SEPARATOR"));
+            
+            // Config'i kaydet
+            saveConfigData();
             
             new BukkitRunnable() {
                 int countdown = 10;
@@ -277,6 +289,9 @@ public class PxlochsRevival extends JavaPlugin implements Listener, CommandExecu
             deadPlayer.sendMessage(msg("REVIVED_SUBTITLE"));
             deadPlayer.sendMessage(msg("SEPARATOR"));
         }
+        
+        // Config'i kaydet
+        saveConfigData();
     }
     
     @Override

@@ -94,4 +94,90 @@ messages:
     INV_USED: "&a{cost} {material} kullanıldı!"
     
     # Sunucu mesajları
-    SERVER_RESETTING: "&c&l========================================\n&c&lSUNUCU SIFIRLANIYOR!\n\n&7Dünyalar silinecek ve sunucu kapanacak.\
+    SERVER_RESETTING: "&c&l========================================\n&c&lSUNUCU SIFIRLANIYOR!\n\n&7Dünyalar silinecek ve sunucu kapanacak.\n&7Admin tarafından yeniden başlatılacak!\n&c&l========================================"
+    CONFIG_RESET: "Config sıfırlandı!"
+    WORLDS_DELETED: "Dünyalar silindi!"
+    SERVER_SHUTDOWN: "&c&lSUNUCU KAPATILIYOR!"
+    SERVER_RESTART_INFO: "Yeniden başlatmak için START düğmesine basın!"
+
+  # English Messages
+  en:
+    # Death messages
+    PLAYER_DIED: "&e{player} &cdied!"
+    PERMANENT_DEATH: "&c&l{player} PERMANENTLY DIED!"
+    NO_REVIVES_LEFT: "&7No revival rights left..."
+    BOTH_DEAD: "&c&lBoth players died!"
+    SERVER_RESET: "&c&lSERVER RESETTING!"
+    
+    # Revival messages
+    REVIVE_COMMAND: "&aTo revive: &e/revive {player}"
+    REVIVE_COST: "&7Required: &6{cost} {material}"
+    REVIVE_SUCCESS: "&a&l{reviver} &erevived &l{target}&a!"
+    REVIVE_FAILED_DEAD: "&cDead players cannot revive!"
+    REVIVE_FAILED_ALIVE: "&c{player} is already alive!"
+    REVIVE_FAILED_NO_RIGHTS: "&c{player} cannot be revived! No revival rights left."
+    REVIVE_FAILED_ITEMS: "&c&lNot enough {material}!"
+    REVIVED_TITLE: "&e&lYOU WERE REVIVED!"
+    REVIVED_SUBTITLE: "&7Use your second chance wisely!"
+    LAST_CHANCE: "&c&lTHIS IS YOUR LAST CHANCE! You cannot be revived again!"
+    
+    # Lives system
+    LIVES_REMAINING: "&6Revival rights remaining: &e{lives}/3"
+    LIVES_WARNING: "&c&lWARNING: {player} cannot be revived anymore!"
+    YOUR_LIVES: "&7Your revival rights: &a{lives}/3"
+    PLAYER_STATUS_DEAD: "&c(Dead)"
+    PLAYER_STATUS_ALIVE: "&a(Alive)"
+    
+    # Diamond system
+    DIAMOND_FOUND: "&b&l{player} &e&lFOUND DIAMONDS!"
+    COST_CHANGED: "&cRevival cost changed:"
+    COST_OLD: "&7Old: &f20 Iron"
+    COST_NEW: "&7New: &e5 Diamonds"
+    COST_INFO: "&7Cost increases by 1 diamond every 2 nights!"
+    COST_INCREASED: "&cRevival cost increased: &e{cost} Diamonds"
+    NIGHTS_PASSED: "&e&l2 Nights Passed!"
+    
+    # General messages
+    COUNTDOWN: "&e{seconds} seconds..."
+    MATERIAL_IRON: "Iron"
+    MATERIAL_DIAMOND: "Diamond"
+    SEPARATOR: "&6&l========================================"
+    
+    # Command messages
+    CMD_USAGE_REVIVE: "&cUsage: /revive <player_name>"
+    CMD_USAGE_LIVES: "&cUsage: /lives"
+    CMD_PLAYER_NOT_FOUND: "&cPlayer not found: {player}"
+    CMD_ONLY_PLAYERS: "&cOnly players can use this command!"
+    CMD_LIVES_TITLE: "&e&lREVIVAL INFORMATION:"
+    CMD_LIVES_COST: "&7Revival cost: &6{cost} {material}"
+    CMD_LIVES_NIGHTS: "&7Nights passed: &e{nights}"
+    CMD_DEAD_PLAYERS: "&7Dead players:"
+    
+    # Inventory messages
+    INV_REQUIRED: "&7Required: &6{cost} {material}"
+    INV_CURRENT: "&7In inventory: &e{current} {material}"
+    INV_MISSING: "&cMissing: &e{missing} {material}"
+    INV_USED: "&a{cost} {material} used!"
+    
+    # Server messages
+    SERVER_RESETTING: "&c&l========================================\n&c&lSERVER RESETTING!\n\n&7Worlds will be deleted and server will shut down.\n&7Admin will restart it!\n&c&l========================================"
+    CONFIG_RESET: "Config reset!"
+    WORLDS_DELETED: "Worlds deleted!"
+    SERVER_SHUTDOWN: "&c&lSERVER SHUTTING DOWN!"
+    SERVER_RESTART_INFO: "Press START button to restart!"
+
+# ==========================================
+# Kendi Dilinizi Eklemek İçin / To Add Your Language:
+# ==========================================
+# 1. Yukarıdaki 'en:' bölümünü kopyalayın
+# 2. 'en:' yerine dilinizin kodunu yazın (örn: 'de:', 'fr:', 'es:')
+# 3. Tüm mesajları kendi dilinize çevirin
+# 4. settings.language değerini yeni dil kodunuza değiştirin
+# ==========================================
+# Example / Örnek:
+#
+#   de:
+#     PLAYER_DIED: "&e{player} &cist gestorben!"
+#     PERMANENT_DEATH: "&c&l{player} IST PERMANENT GESTORBEN!"
+#     ...
+# ==========================================
